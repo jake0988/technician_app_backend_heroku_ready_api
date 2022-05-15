@@ -12,7 +12,6 @@ class Api::V1::UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new(user_params)
-    # byebug
     if @user.save
       session[:user_id] = @user.id
       render json: UserSerializer.new(@user).serializable_hash.to_json, status: :created

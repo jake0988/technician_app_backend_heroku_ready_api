@@ -886,3 +886,572 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 17ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 5091)
 
 
+Started GET "/" for ::1 at 2022-05-15 00:06:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/program/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/program/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.3ms | Allocations: 575)
+Completed 200 OK in 24ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 5091)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-05-15 00:06:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/get_current_user" for ::1 at 2022-05-15 00:09:41 -0400
+Started GET "/api/v1/users/2/customers" for ::1 at 2022-05-15 00:09:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/get_current_user"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/2/customers"):
+  
+Started GET "/api/v1/users/2/appointments" for ::1 at 2022-05-15 00:09:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/2/appointments"):
+  
+Started GET "/api/v1/users/2/customers" for ::1 at 2022-05-15 00:09:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/2/customers"):
+  
+Started POST "/api/v1/users/2/customers/3/pianos" for ::1 at 2022-05-15 00:09:57 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/users/2/customers/3/pianos"):
+  
+Started GET "/api/v1/users/2/pianos" for ::1 at 2022-05-15 00:09:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/2/pianos"):
+  
+Started GET "/api/v1/users/2/customers" for ::1 at 2022-05-15 00:10:21 -0400
+Started GET "/api/v1/get_current_user" for ::1 at 2022-05-15 00:10:21 -0400
+Started GET "/api/v1/users/2/appointments" for ::1 at 2022-05-15 00:10:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/get_current_user"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/2/appointments"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/2/customers"):
+  
+Started GET "/api/v1/get_current_user" for ::1 at 2022-05-15 00:10:28 -0400
+Started GET "/api/v1/users/2/appointments" for ::1 at 2022-05-15 00:10:28 -0400
+Started GET "/api/v1/users/2/customers" for ::1 at 2022-05-15 00:10:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/2/appointments"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/get_current_user"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/2/customers"):
+  
+Started GET "/api/v1/users/2/appointments" for ::1 at 2022-05-15 00:13:00 -0400
+Started GET "/api/v1/get_current_user" for ::1 at 2022-05-15 00:13:00 -0400
+Started GET "/api/v1/users/2/customers" for ::1 at 2022-05-15 00:13:00 -0400
+Processing by Api::V1::SessionsController#get_current_user as */*
+  Parameters: {"session"=>{}}
+Completed 500 Internal Server Error in 8ms (Allocations: 1971)
+
+
+  
+NoMethodError (undefined method `logged_in?' for #<Api::V1::SessionsController:0x00000000012c28>
+Did you mean?  logger):
+  
+app/controllers/api/v1/sessions_controller.rb:16:in `get_current_user'
+Processing by Api::V1::CustomersController#index as */*
+  Parameters: {"user_id"=>"2", "customer"=>{}}
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"2", "appointment"=>{}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 32.7ms | Allocations: 1948)
+
+
+  
+NoMethodError (undefined method `logged_in?' for #<Api::V1::CustomersController:0x00000000012cc8>
+Did you mean?  logger):
+  
+app/controllers/api/v1/customers_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 51.6ms | Allocations: 14688)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Api::V1::AppointmentsController:0x00000000012c28>):
+  
+app/controllers/api/v1/appointments_controller.rb:3:in `index'
+Started GET "/api/v1/users/2/appointments" for ::1 at 2022-05-15 00:13:43 -0400
+Started GET "/api/v1/get_current_user" for ::1 at 2022-05-15 00:13:43 -0400
+Started GET "/api/v1/users/2/customers" for ::1 at 2022-05-15 00:13:43 -0400
+Processing by Api::V1::SessionsController#get_current_user as */*
+  Parameters: {"session"=>{}}
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"2", "appointment"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1929)
+
+
+  
+NoMethodError (undefined method `logged_in?' for #<Api::V1::SessionsController:0x00000000012db8>
+Did you mean?  logger):
+  
+app/controllers/api/v1/sessions_controller.rb:16:in `get_current_user'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2009)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Api::V1::AppointmentsController:0x00000000012cc8>):
+  
+app/controllers/api/v1/appointments_controller.rb:3:in `index'
+Processing by Api::V1::CustomersController#index as */*
+  Parameters: {"user_id"=>"2", "customer"=>{}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 7.5ms | Allocations: 1949)
+
+
+  
+NoMethodError (undefined method `logged_in?' for #<Api::V1::CustomersController:0x00000000012d90>
+Did you mean?  logger):
+  
+app/controllers/api/v1/customers_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2022-05-15 07:59:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/program/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/program/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.5ms | Allocations: 575)
+Completed 200 OK in 24ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 5091)
+
+
+Started GET "/api/v1/get_current_user" for ::1 at 2022-05-15 07:59:33 -0400
+Started GET "/api/v1/users/2/customers" for ::1 at 2022-05-15 07:59:33 -0400
+Started GET "/api/v1/users/[object%20Object]/appointments" for ::1 at 2022-05-15 07:59:33 -0400
+Processing by Api::V1::SessionsController#get_current_user as */*
+  Parameters: {"session"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1833)
+
+
+  
+NameError (uninitialized constant ApplicationController::User):
+  
+app/controllers/application_controller.rb:4:in `current_user'
+app/controllers/application_controller.rb:8:in `logged_in?'
+app/controllers/api/v1/sessions_controller.rb:16:in `get_current_user'
+Processing by Api::V1::CustomersController#index as */*
+  Parameters: {"user_id"=>"2", "customer"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 14.7ms | Allocations: 1801)
+
+
+  
+NameError (uninitialized constant ApplicationController::User):
+  
+app/controllers/application_controller.rb:4:in `current_user'
+app/controllers/application_controller.rb:8:in `logged_in?'
+app/controllers/api/v1/customers_controller.rb:4:in `index'
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"[object Object]", "appointment"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 23.3ms | Allocations: 1800)
+
+
+  
+NameError (uninitialized constant ApplicationController::User):
+  
+app/controllers/application_controller.rb:4:in `current_user'
+app/controllers/api/v1/appointments_controller.rb:3:in `index'
+Started GET "/api/v1/users/2/appointments" for ::1 at 2022-05-15 07:59:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"2", "appointment"=>{}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 5.0ms | Allocations: 14470)
+
+
+  
+NameError (uninitialized constant ApplicationController::User):
+  
+app/controllers/application_controller.rb:4:in `current_user'
+app/controllers/api/v1/appointments_controller.rb:3:in `index'
+Started POST "/api/v1/users/2/customers/" for ::1 at 2022-05-15 08:00:12 -0400
+Processing by Api::V1::CustomersController#create as */*
+  Parameters: {"name"=>"asfd", "address"=>"    ", "email"=>"", "phone_number"=>"", "user_id"=>"2", "customer"=>{"name"=>"asfd", "address"=>"    ", "email"=>"", "phone_number"=>"", "user_id"=>"2"}}
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 21.9ms | Allocations: 9104)
+
+
+  
+NameError (Rails couldn't find a valid model for User association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.):
+  
+app/controllers/api/v1/customers_controller.rb:16:in `create'
+Started GET "/api/v1/users/2/customers" for ::1 at 2022-05-15 08:00:13 -0400
+Processing by Api::V1::CustomersController#index as */*
+  Parameters: {"user_id"=>"2", "customer"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1788)
+
+
+  
+NameError (uninitialized constant ApplicationController::User):
+  
+app/controllers/application_controller.rb:4:in `current_user'
+app/controllers/application_controller.rb:8:in `logged_in?'
+app/controllers/api/v1/customers_controller.rb:4:in `index'
+Started GET "/api/v1/users/2/appointments" for ::1 at 2022-05-15 08:01:15 -0400
+Started GET "/api/v1/get_current_user" for ::1 at 2022-05-15 08:01:15 -0400
+Started GET "/api/v1/users/2/customers" for ::1 at 2022-05-15 08:01:15 -0400
+Processing by Api::V1::SessionsController#get_current_user as */*
+  Parameters: {"session"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1805)
+
+
+  
+NameError (uninitialized constant ApplicationController::User):
+  
+app/controllers/application_controller.rb:4:in `current_user'
+app/controllers/application_controller.rb:8:in `logged_in?'
+app/controllers/api/v1/sessions_controller.rb:16:in `get_current_user'
+Processing by Api::V1::CustomersController#index as */*
+  Parameters: {"user_id"=>"2", "customer"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 13.7ms | Allocations: 1804)
+
+
+  
+NameError (uninitialized constant ApplicationController::User):
+  
+app/controllers/application_controller.rb:4:in `current_user'
+app/controllers/application_controller.rb:8:in `logged_in?'
+app/controllers/api/v1/customers_controller.rb:4:in `index'
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"2", "appointment"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 13.8ms | Allocations: 1798)
+
+
+  
+NameError (uninitialized constant ApplicationController::User):
+  
+app/controllers/application_controller.rb:4:in `current_user'
+app/controllers/api/v1/appointments_controller.rb:3:in `index'
+Started GET "/api/v1/users/[object%20Object]/appointments" for ::1 at 2022-05-15 08:01:25 -0400
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"[object Object]", "appointment"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1790)
+
+
+  
+NameError (uninitialized constant ApplicationController::User):
+  
+app/controllers/application_controller.rb:4:in `current_user'
+app/controllers/api/v1/appointments_controller.rb:3:in `index'
+Started DELETE "/api/v1/delete" for ::1 at 2022-05-15 08:01:28 -0400
+Processing by Api::V1::SessionsController#destroy as */*
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 689)
+
+
+Started POST "/api/v1/signup" for ::1 at 2022-05-15 08:01:32 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"a", "username"=>"a", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1906)
+
+
+  
+NameError (uninitialized constant Api::V1::UsersController::User):
+  
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/signup" for ::1 at 2022-05-15 08:01:35 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"a", "username"=>"a", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1875)
+
+
+  
+NameError (uninitialized constant Api::V1::UsersController::User):
+  
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/signup" for ::1 at 2022-05-15 08:01:38 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"a", "username"=>"a", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1875)
+
+
+  
+NameError (uninitialized constant Api::V1::UsersController::User):
+  
+app/controllers/api/v1/users_controller.rb:14:in `create'
+Started POST "/api/v1/login" for ::1 at 2022-05-15 08:03:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "session"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 16642)
+
+
+  
+NameError (uninitialized constant Api::V1::SessionsController::User):
+  
+app/controllers/api/v1/sessions_controller.rb:3:in `create'
+Started POST "/api/v1/login" for ::1 at 2022-05-15 08:03:50 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "session"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1881)
+
+
+  
+NameError (uninitialized constant Api::V1::SessionsController::User):
+  
+app/controllers/api/v1/sessions_controller.rb:3:in `create'
+Started POST "/api/v1/login" for ::1 at 2022-05-15 08:12:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "session"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 16642)
+
+
+  
+NameError (uninitialized constant Api::V1::SessionsController::User):
+  
+app/controllers/api/v1/sessions_controller.rb:3:in `create'
+Started POST "/api/v1/login" for ::1 at 2022-05-15 08:13:31 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "session"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2031)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<Api::V1::SessionsController:0x000000000174a8>):
+  
+app/controllers/api/v1/sessions_controller.rb:3:in `create'
+Started POST "/api/v1/login" for ::1 at 2022-05-15 08:14:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "session"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:3:in `create'
+Completed 200 OK in 39ms (Views: 0.2ms | ActiveRecord: 12.1ms | Allocations: 20596)
+
+
+Started POST "/api/v1/login" for ::1 at 2022-05-15 08:14:33 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "session"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:3:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 571)
+
+
+Started POST "/api/v1/signup" for ::1 at 2022-05-15 08:14:36 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"a", "username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:16:in `create'
+  [1m[36mUser Create (23.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "a"], ["name", "a"], ["password_digest", "[FILTERED]"], ["created_at", "2022-05-15 12:14:37.132096"], ["updated_at", "2022-05-15 12:14:37.132096"]]
+  ↳ app/controllers/api/v1/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 341ms (ActiveRecord: 42.0ms | Allocations: 9503)
+
+
+  
+NameError (uninitialized constant Api::V1::UsersController::UserSerializer
+Did you mean?  Serializers):
+  
+app/controllers/api/v1/users_controller.rb:18:in `create'
+Started POST "/api/v1/signup" for ::1 at 2022-05-15 08:18:14 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"a", "username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (3.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/users_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 364ms (Views: 0.3ms | ActiveRecord: 23.2ms | Allocations: 10301)
+
+
+Started POST "/api/v1/login" for ::1 at 2022-05-15 08:18:20 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "session"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 3.3ms | Allocations: 3363)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<Api::V1::SessionsController:0x0000000001f798>):
+  
+app/controllers/api/v1/sessions_controller.rb:6:in `create'
+Started POST "/api/v1/login" for ::1 at 2022-05-15 08:19:44 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "session"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 12.6ms | Allocations: 7571)
+
+
+  
+NameError (uninitialized constant Api::V1::SessionsController::UserSerializer
+Did you mean?  Api::V1::UsersController):
+  
+app/controllers/api/v1/sessions_controller.rb:6:in `create'
+Started POST "/api/v1/login" for ::1 at 2022-05-15 08:23:10 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "session"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 9.2ms | Allocations: 7568)
+
+
+  
+NameError (uninitialized constant Api::V1::SessionsController::UserSerializer
+Did you mean?  Api::V1::UsersController):
+  
+app/controllers/api/v1/sessions_controller.rb:6:in `create'
+Started POST "/api/v1/login" for ::1 at 2022-05-15 08:28:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "session"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:3:in `create'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 353ms (Views: 0.3ms | ActiveRecord: 16.7ms | Allocations: 25976)
+
+
+Started GET "/api/v1/users/1/customers" for ::1 at 2022-05-15 08:28:04 -0400
+Processing by Api::V1::CustomersController#index as */*
+  Parameters: {"user_id"=>"1", "customer"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCustomer Load (4.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/customers_controller.rb:6:in `index'
+Completed 200 OK in 105ms (Views: 44.2ms | ActiveRecord: 7.9ms | Allocations: 7268)
+
+
+Started GET "/api/v1/users/[object%20Object]/appointments" for ::1 at 2022-05-15 08:28:06 -0400
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"[object Object]", "appointment"=>{}}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mAppointment Load (4.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/appointments_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 2.6ms | ActiveRecord: 13.2ms | Allocations: 1861)
+
+
+Started POST "/api/v1/users/1/customers/" for ::1 at 2022-05-15 08:28:12 -0400
+Processing by Api::V1::CustomersController#create as */*
+  Parameters: {"name"=>"asfd", "address"=>"    ", "email"=>"", "phone_number"=>"", "user_id"=>"1", "customer"=>{"name"=>"asfd", "address"=>"    ", "email"=>"", "phone_number"=>"", "user_id"=>"1"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/customers_controller.rb:16:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/customers_controller.rb:16:in `create'
+  [1m[36mCustomer Create (4.7ms)[0m  [1m[32mINSERT INTO "customers" ("name", "address", "email", "phone_number", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "asfd"], ["address", "    "], ["email", ""], ["phone_number", nil], ["user_id", 1], ["created_at", "2022-05-15 12:28:12.599884"], ["updated_at", "2022-05-15 12:28:12.599884"]]
+  ↳ app/controllers/api/v1/customers_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/customers_controller.rb:16:in `create'
+  [1m[36mPiano Load (0.9ms)[0m  [1m[34mSELECT "pianos".* FROM "pianos" WHERE "pianos"."user_id" = $1 AND "pianos"."customer_id" = $2[0m  [["user_id", 1], ["customer_id", 1]]
+  ↳ app/models/customer.rb:14:in `number_of_pianos'
+Completed 202 Accepted in 48ms (Views: 13.0ms | ActiveRecord: 16.2ms | Allocations: 13563)
+
+
+Started GET "/api/v1/users/1/customers" for ::1 at 2022-05-15 08:28:12 -0400
+Processing by Api::V1::CustomersController#index as */*
+  Parameters: {"user_id"=>"1", "customer"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/customers_controller.rb:6:in `index'
+  [1m[36mPiano Load (0.7ms)[0m  [1m[34mSELECT "pianos".* FROM "pianos" WHERE "pianos"."user_id" = $1 AND "pianos"."customer_id" = $2[0m  [["user_id", 1], ["customer_id", 1]]
+  ↳ app/models/customer.rb:14:in `number_of_pianos'
+Completed 200 OK in 27ms (Views: 3.2ms | ActiveRecord: 1.7ms | Allocations: 2482)
+
+
+Started GET "/api/v1/users/1/appointments" for ::1 at 2022-05-15 08:28:19 -0400
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"1", "appointment"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mAppointment Load (2.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/appointments_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 2.7ms | ActiveRecord: 3.0ms | Allocations: 1417)
+
+
+Started POST "/api/v1/users/1/customers/1/appointments" for ::1 at 2022-05-15 08:28:26 -0400
+Processing by Api::V1::AppointmentsController#create as */*
+  Parameters: {"appointment"=>{"work_done"=>"Fixed Stuff", "price"=>200, "date"=>"2022-05-18", "hours"=>5, "user_id"=>1, "customer_id"=>"1"}, "user_id"=>"1", "customer_id"=>"1"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/appointments_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/appointments_controller.rb:9:in `create'
+  [1m[36mAppointment Create (11.7ms)[0m  [1m[32mINSERT INTO "appointments" ("initial_a4", "work_done", "price", "date", "piano_id", "hours", "user_id", "created_at", "updated_at", "customer_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["initial_a4", nil], ["work_done", "Fixed Stuff"], ["price", 200], ["date", "2022-05-18"], ["piano_id", nil], ["hours", 5], ["user_id", 1], ["created_at", "2022-05-15 12:28:26.334341"], ["updated_at", "2022-05-15 12:28:26.334341"], ["customer_id", 1]]
+  ↳ app/controllers/api/v1/appointments_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/appointments_controller.rb:9:in `create'
+Completed 200 OK in 46ms (Views: 0.3ms | ActiveRecord: 16.6ms | Allocations: 7927)
+
+
+Started GET "/api/v1/users/[object%20Object]/appointments" for ::1 at 2022-05-15 08:28:26 -0400
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"[object Object]", "appointment"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mAppointment Load (0.8ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/appointments_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 1.2ms | Allocations: 1572)
+
+
+Started GET "/api/v1/users/1/appointments" for ::1 at 2022-05-15 08:28:41 -0400
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"1", "appointment"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/appointments_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 1584)
+
+
+Started GET "/api/v1/users/1/customers" for ::1 at 2022-05-15 08:28:44 -0400
+Processing by Api::V1::CustomersController#index as */*
+  Parameters: {"user_id"=>"1", "customer"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/customers_controller.rb:6:in `index'
+  [1m[36mPiano Load (0.3ms)[0m  [1m[34mSELECT "pianos".* FROM "pianos" WHERE "pianos"."user_id" = $1 AND "pianos"."customer_id" = $2[0m  [["user_id", 1], ["customer_id", 1]]
+  ↳ app/models/customer.rb:14:in `number_of_pianos'
+Completed 200 OK in 12ms (Views: 2.5ms | ActiveRecord: 3.2ms | Allocations: 2472)
+
+
+Started POST "/api/v1/users/1/customers/1/pianos" for ::1 at 2022-05-15 08:28:48 -0400
+Processing by Api::V1::PianosController#create as */*
+  Parameters: {"piano"=>{"make"=>"erg", "user_id"=>"1", "customer_id"=>"1"}, "text/plain"=>["null"], "user_id"=>"1", "customer_id"=>"1"}
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/pianos_controller.rb:25:in `create'
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/pianos_controller.rb:25:in `create'
+  [1m[36mPiano Create (1.9ms)[0m  [1m[32mINSERT INTO "pianos" ("make", "model", "year", "serial", "notes", "customer_id", "user_id", "created_at", "updated_at", "appointment_id", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["make", "erg"], ["model", nil], ["year", nil], ["serial", nil], ["notes", nil], ["customer_id", 1], ["user_id", 1], ["created_at", "2022-05-15 12:28:48.249227"], ["updated_at", "2022-05-15 12:28:48.249227"], ["appointment_id", nil], ["image_url", nil]]
+  ↳ app/controllers/api/v1/pianos_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/pianos_controller.rb:25:in `create'
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Piano"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/pianos_controller.rb:26:in `create'
+Completed 202 Accepted in 112ms (Views: 25.6ms | ActiveRecord: 17.3ms | Allocations: 14135)
+
+
+Started GET "/api/v1/users/1/pianos" for ::1 at 2022-05-15 08:28:48 -0400
+Processing by Api::V1::PianosController#index as */*
+  Parameters: {"id"=>"1", "piano"=>{}}
+  [1m[36mPiano Load (0.4ms)[0m  [1m[34mSELECT "pianos".* FROM "pianos" WHERE "pianos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/pianos_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Piano"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/pianos_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 1967)
+
+
+Started GET "/api/v1/users/[object%20Object]/appointments" for ::1 at 2022-05-15 08:29:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AppointmentsController#index as */*
+  Parameters: {"id"=>"[object Object]", "appointment"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mAppointment Load (0.7ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/appointments_controller.rb:4:in `index'
+Completed 200 OK in 65ms (Views: 11.0ms | ActiveRecord: 25.2ms | Allocations: 31677)
+
+
