@@ -49,9 +49,10 @@ export const clearCurrentCustomer = () => {
   };
 };
 
+const devOrProd = "technician-app.herokuapp.com"
 export const login = (credentials, history) => {
   return (dispatch) => {
-    return fetch("http://localhost:3001/api/v1/login", {
+    return fetch("http://technician-app.herokuapp.com/api/v1/login", {
       credentials: "include",
       method: "POST",
       headers: {
@@ -79,7 +80,7 @@ export const login = (credentials, history) => {
 
 export const getCurrentUser = () => {
   return (dispatch) => {
-    return fetch("http://localhost:3001/api/v1/get_current_user", {
+    return fetch("http://technician-app.herokuapp.com/api/v1/get_current_user", {
       credentials: "include",
       method: "GET",
       headers: {
@@ -106,7 +107,7 @@ export const logout = () => {
     dispatch(clearCustomers());
     dispatch(clearcurrentPiano());
     dispatch(clearPianos());
-    return fetch("http://localhost:3001/api/v1/delete", {
+    return fetch("http://technician-app.herokuapp.com/api/v1/delete", {
       credentials: "include",
       method: "DELETE",
     });
@@ -118,7 +119,7 @@ export const signup = (credentials, history) => {
     const userInfo = {
       user: credentials,
     };
-    return fetch("http://localhost:3001/api/v1/signup", {
+    return fetch("http://technician-app.herokuapp.com/api/v1/signup", {
       credentials: "include",
       method: "POST",
       headers: {
