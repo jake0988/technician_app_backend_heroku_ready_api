@@ -38,6 +38,7 @@ import EditPianoForm from "./components/pianos/EditPianoForm";
 
 class App extends Component {
   componentDidMount() {
+    debugger
     this.props.getCurrentUser();
     this.props.appointmentsList(this.props.userId);
   }
