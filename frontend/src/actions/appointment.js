@@ -51,7 +51,7 @@ export const addAppointment = (userId, customerId, history, credentials) => {
   };
   return (dispatch) => {
     return fetch(
-      `http://localhost:3001/api/v1/users/${userId}/customers/${customerId}/appointments`,
+      `http://technician-app.herokuapp.com/api/v1/users/${userId}/customers/${customerId}/appointments`,
       {
         credentials: "include",
         method: "POST",
@@ -77,7 +77,7 @@ export const addAppointment = (userId, customerId, history, credentials) => {
 
 export const appointmentsList = (userId) => {
   return (dispatch) => {
-    return fetch(`http://localhost:3001/api/v1/users/${userId}/appointments`, {
+    return fetch(`http://technician-app.herokuapp.com/api/v1/users/${userId}/appointments`, {
       credentials: "include",
       method: "GET",
       headers: {
@@ -123,7 +123,7 @@ export const patchAppointmentInfo = (
       },
     };
     return fetch(
-      `http://localhost:3001/api/v1/users/${userId}/customers/${customerId}/appointments/${appointmentId}`,
+      `http://technician-app.herokuapp.com/api/v1/users/${userId}/customers/${customerId}/appointments/${appointmentId}`,
       {
         credentials: "include",
         method: "PATCH",
@@ -159,7 +159,7 @@ export const destroyAppointment = (
     // debugger;
 
     return fetch(
-      `http://localhost:3001/api/v1/users/${userId}/appointments/${appointmentId}`,
+      `http://technician-app.herokuapp.com/api/v1/users/${userId}/appointments/${appointmentId}`,
       {
         credentials: "include",
         method: "DELETE",

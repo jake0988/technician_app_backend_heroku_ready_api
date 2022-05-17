@@ -35,10 +35,10 @@ export const setCurrentPiano = (pianoData) => {
 };
 
 export function addPiano(userId, customerId, data) {
-  // const url = `http://localhost:3001/api/v1/users/${userId}/customers/${customerId}/pianos`;
+  // const url = `http://technician-app.herokuapp.com/api/v1/users/${userId}/customers/${customerId}/pianos`;
   return (dispatch) => {
     return fetch(
-      `http://localhost:3001/api/v1/users/${userId}/customers/${customerId}/pianos`,
+      `http://technician-app.herokuapp.com/api/v1/users/${userId}/customers/${customerId}/pianos`,
       {
         credentials: "include",
         method: "POST",
@@ -64,7 +64,7 @@ export function addPiano(userId, customerId, data) {
 
 export const getPianos = (user) => {
   return (dispatch) => {
-    return fetch(`http://localhost:3001/api/v1/users/${user}/pianos`, {
+    return fetch(`http://technician-app.herokuapp.com/api/v1/users/${user}/pianos`, {
       credentials: "include",
       method: "get",
       headers: {
@@ -107,7 +107,7 @@ export const patchPianoInfo = (
       },
     };
     return fetch(
-      `http://localhost:3001/api/v1/users/${userId}/customers/${customerId}/pianos/${pianoId}`,
+      `http://technician-app.herokuapp.com/api/v1/users/${userId}/customers/${customerId}/pianos/${pianoId}`,
       {
         credentials: "include",
         method: "PATCH",
@@ -132,7 +132,7 @@ export const patchPianoInfo = (
 export const destroyPiano = (userId, customerId, pianoId, history) => {
   return (dispatch) => {
     return fetch(
-      `http://localhost:3001/api/v1/users/${userId}/customers/${customerId}/pianos/${pianoId}`,
+      `http://technician-app.herokuapp.com/api/v1/users/${userId}/customers/${customerId}/pianos/${pianoId}`,
       {
         credentials: "include",
         method: "DELETE",
@@ -154,7 +154,7 @@ export const destroyPiano = (userId, customerId, pianoId, history) => {
 export function newPiano(userId, customerId, data, history) {
   return (dispatch) => {
     return fetch(
-      `http://localhost:3001/api/v1/users/${userId}/customers/${customerId}/pianos`,
+      `http://technician-app.herokuapp.com/api/v1/users/${userId}/customers/${customerId}/pianos`,
       {
         credentials: "include",
         method: "POST",

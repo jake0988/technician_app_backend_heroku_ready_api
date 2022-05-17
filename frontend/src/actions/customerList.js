@@ -31,7 +31,7 @@ export const destroyCustomerSuccess = (customerId) => {
 
 export const customerList = (userId) => {
   return (dispatch) => {
-    return fetch(`http://localhost:3001/api/v1/users/${userId}/customers`, {
+    return fetch(`http://technician-app.herokuapp.com/api/v1/users/${userId}/customers`, {
       credentials: "include",
       method: "GET",
       headers: {
@@ -55,7 +55,7 @@ export const customerList = (userId) => {
 export const createCustomer = (formData, userId, history) => {
   const createCustomerSuccess = { ...formData, user_id: userId };
   return (dispatch) => {
-    return fetch(`http://localhost:3001/api/v1/users/${userId}/customers/`, {
+    return fetch(`http://technician-app.herokuapp.com/api/v1/users/${userId}/customers/`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -96,7 +96,7 @@ export const patchCustomerInfo = (formData, userId, history, customerId) => {
       },
     };
     return fetch(
-      `http://localhost:3001/api/v1/users/${userId}/customers/${customerId}`,
+      `http://technician-app.herokuapp.com/api/v1/users/${userId}/customers/${customerId}`,
       {
         credentials: "include",
         method: "PATCH",
@@ -125,7 +125,7 @@ export const destroyCustomer = (userId, customerId, history) => {
     // debugger;
 
     return fetch(
-      `http://localhost:3001/api/v1/users/${userId}/customers/${customerId}`,
+      `http://technician-app.herokuapp.com/api/v1/users/${userId}/customers/${customerId}`,
       {
         credentials: "include",
         method: "DELETE",
