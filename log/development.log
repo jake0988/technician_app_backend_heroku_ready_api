@@ -1455,3 +1455,11 @@ Processing by Api::V1::AppointmentsController#index as */*
 Completed 200 OK in 65ms (Views: 11.0ms | ActiveRecord: 25.2ms | Allocations: 31677)
 
 
+Started GET "/" for ::1 at 2022-05-16 23:13:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/program/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/program/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.2ms | Allocations: 575)
+Completed 200 OK in 16ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 5091)
+
+
