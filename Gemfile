@@ -6,6 +6,8 @@ gem "net-http"
 gem 'aws-sdk-s3', '~> 1'
 gem 'aws-sdk-rails', '~> 3'
 gem 'jsonapi-serializer'
+gem 'sassc-rails'
+gem 'sass-rails', require: false
 # gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'dotenv-rails', groups: [:development, :test]
 gem "rack-timeout"
